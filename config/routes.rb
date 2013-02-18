@@ -1,4 +1,6 @@
 Propertymanagement::Application.routes.draw do
+  resources :user_sessions
+
   resources :repair_requests
 
   resources :users
@@ -8,6 +10,8 @@ Propertymanagement::Application.routes.draw do
   resources :units
 
   resources :properties
+  
+  root :to => 'users#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

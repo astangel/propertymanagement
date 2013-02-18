@@ -1,5 +1,5 @@
 class Property < ActiveRecord::Base
-  att_accessible :name, :address, :city, :state, :zip
+  attr_accessible :name, :address, :city, :state, :zip, :units
 
   has_many :units
 end

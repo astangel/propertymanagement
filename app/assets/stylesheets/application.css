@@ -1,13 +1,111 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
+      Created by Keith Donegan of Code-Sucks.com
+	  
+	  E-Mail: Keithdonegan@gmail.com
+	  
+	  You can do whatever you want with these layouts,
+	  but it would be greatly appreciated if you gave a link
+	  back to http://www.code-sucks.com
+	  
 */
+
+* { padding: 0; margin: 0; }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+#wrapper {
+    margin: 0 auto;
+    width: 922px;
+}
+#header {
+    width: 900px;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+    height: 100px;
+    margin: 10px 0px 0px 0px;
+    background: #DAC8BF;
+}
+#navigation {
+    width: 900px;
+    color: #333;
+    padding: 0px 10px;
+    border: 1px solid #ccc;
+    margin: 0px 0px 0px 0px;
+    background: #BD9C8C;
+    overflow:hidden;
+}
+#content {
+    width: 900px;
+    color: #333;
+    border: 1px solid #ccc;
+    background: #F2F2E6;
+    margin: 0px 0px 0px 0px;
+    padding: 10px;
+    height: 350px;
+}
+#footer {
+    width: 900px;
+    color: #333;
+    border: 1px solid #ccc;
+    background: #BD9C8C;
+    margin: 0px 0px 10px 0px;
+    padding: 10px;
+}
+
+#error {
+    font-size: 130%;
+    color: red;
+    padding-bottom: 25px;
+}
+
+#notice {
+    font-size: 130%;
+    color: red;
+    padding-bottom: 25px;
+}
+
+/* CSS CODE FROM  http://pythoughts.com/table-style-css/         */
+
+table {
+    background-color: #f5f5f5;
+    padding: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #ebebeb;
+}
+td, th {
+    padding: 1px 5px;
+}
+thead {
+    font: normal 15px Helvetica Neue,Helvetica,sans-serif;
+    text-shadow: 0 1px 0 white;
+    color: #999;
+}
+th {
+    text-align: left;
+    border-bottom: 1px solid #fff;
+    font-weight: bold;
+    color: green;
+}
+td {
+    font-size: 14px;
+}
+td:hover {
+    background-color: #fff;
+}
+
+
+/* OTHER CSS CODE */
+h1 {
+    font-weight: bold;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+#navigation div {display:block; float:left; min-width:30px; padding: .5em 1em;}
+#navigation div:hover {background-color:#DAC8BF;}
+#login {float:right;}

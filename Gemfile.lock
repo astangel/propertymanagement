@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/binarylogic/authlogic.git
+  revision: e6000bd197bd7f93bf5ffb30db1df2dec8ab686d
+  specs:
+    authlogic (3.2.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -29,9 +37,6 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     arel (3.0.2)
-    authlogic (3.2.0)
-      activerecord (>= 3.0.0)
-      activesupport (>= 3.0.0)
     builder (3.0.4)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -106,7 +111,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  authlogic
+  authlogic!
   coffee-rails (~> 3.2.1)
   jquery-rails
   rails (= 3.2.1)
