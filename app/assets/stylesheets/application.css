@@ -44,7 +44,7 @@ body {
     background: #F2F2E6;
     margin: 0px 0px 0px 0px;
     padding: 10px;
-    height: 350px;
+    min-height: 350px;
 }
 #footer {
     width: 900px;

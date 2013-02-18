@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  attr_accessible :username, :email, :password, :crypted_password, :password_salt, :persistence_token, :roles, :submittedreports, :approvedreports
+  attr_accessible :username, :email, :password, :crypted_password, :password_salt, :persistence_token, :roles, :submittedreports, :approvedreports, :lease_id, :password_confirmation
+  acts_as_authentic
   
   has_and_belongs_to_many :roles
   belongs_to :lease

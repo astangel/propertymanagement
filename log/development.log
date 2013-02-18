@@ -1719,3 +1719,1447 @@ ActionView::Template::Error (undefined method `password' for #<User:0x3fd4b38>):
   Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
   Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
   Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-02-17 22:48:10 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (10.0ms)
+  Rendered users/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 68ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 22:48:11 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 22:48:11 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 22:48:11 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 22:48:11 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 22:48:11 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 22:48:11 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 22:48:11 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 22:48:11 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 22:48:11 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 22:48:11 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-02-17 22:51:02 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (13.0ms)
+  Rendered users/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 22:51:02 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 22:51:02 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 22:51:02 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 22:51:02 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 22:51:02 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 22:51:02 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 22:51:02 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 22:51:02 -0500
+Served asset /user_sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 22:51:02 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 22:51:02 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-02-17 22:56:07 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TbbU1KKl7B39yeu+df3lo3cVR/RZ/9LWtEALX+itxI=", "user"=>{"username"=>"fred", "email"=>"fred@fred.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "lease_id"=>""}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: password_confirmation, lease_id):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-02-17 22:56:19 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TbbU1KKl7B39yeu+df3lo3cVR/RZ/9LWtEALX+itxI=", "user"=>{"username"=>"fred", "email"=>"fred@fred.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "lease_id"=>"1"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: password_confirmation, lease_id):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-02-17 22:56:34 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TbbU1KKl7B39yeu+df3lo3cVR/RZ/9LWtEALX+itxI=", "user"=>{"username"=>"fred", "email"=>"fred@fred.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "lease_id"=>"1"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: password_confirmation, lease_id):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-02-17 22:57:14 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TbbU1KKl7B39yeu+df3lo3cVR/RZ/9LWtEALX+itxI=", "user"=>{"username"=>"fred", "email"=>"fred@fred.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "lease_id"=>"1"}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('fred@fred.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('fred') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."persistence_token" = '3ca3f77e4c545a4b9dbeed2f9aa34f6eae7186375f6266c2dedd3efed591af4a2b937d32e0f3686b7b6e214427f197721dcaf44a80847daaa2d4ce964c1ad84d' LIMIT 1[0m
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[35mSQL (13.0ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "lease_id", "password_salt", "persistence_token", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Mon, 18 Feb 2013 03:57:14 UTC +00:00], ["crypted_password", "cf0af781005b8211542427c677c4483715374eeb404ebb3310e0224f7ce8b9e9dfb174d90365a0b8325491ae5d87db82be7b7a24ea42ba290699659460f54d66"], ["email", "fred@fred.com"], ["lease_id", 1], ["password_salt", "Ab43SjbAmHRooUyXWNs"], ["persistence_token", "3ca3f77e4c545a4b9dbeed2f9aa34f6eae7186375f6266c2dedd3efed591af4a2b937d32e0f3686b7b6e214427f197721dcaf44a80847daaa2d4ce964c1ad84d"], ["updated_at", Mon, 18 Feb 2013 03:57:14 UTC +00:00], ["username", "fred"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 303ms (ActiveRecord: 22.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-17 22:57:14 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 22:57:15 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:15 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:15 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:15 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:15 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:15 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:15 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:15 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:15 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:15 -0500
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-02-17 22:57:20 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (9.0ms)
+  Rendered users/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 70ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 22:57:20 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:20 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:20 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:20 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:20 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:20 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:20 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:20 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:20 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:20 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-02-17 22:57:44 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TbbU1KKl7B39yeu+df3lo3cVR/RZ/9LWtEALX+itxI=", "user"=>{"username"=>"Tammi", "email"=>"Tammi@Tammi.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "lease_id"=>"2"}, "commit"=>"Create User"}
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('Tammi@Tammi.com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('Tammi') LIMIT 1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."persistence_token" = '3c21346d394bc8ba60e17f885649fe19a4d1ee6aef8eb99b37cbde5bbca544e1f54a9f70f7712bab6dfc3b81fb2001d049be98d549ac981bf994c290a5853238' LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '3ca3f77e4c545a4b9dbeed2f9aa34f6eae7186375f6266c2dedd3efed591af4a2b937d32e0f3686b7b6e214427f197721dcaf44a80847daaa2d4ce964c1ad84d' LIMIT 1[0m
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "lease_id", "password_salt", "persistence_token", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Mon, 18 Feb 2013 03:57:44 UTC +00:00], ["crypted_password", "1431e1750d8846d2c63dd6f508eabb7bf290710ad21f85f80a5585aa10a76cd33670b480cee4240abeb9538b5b83f67f44e07a51cb8f3e6d4cdbe4d29573bd5b"], ["email", "Tammi@Tammi.com"], ["lease_id", 2], ["password_salt", "8Rl1y41uy9BcSH2UNRly"], ["persistence_token", "3c21346d394bc8ba60e17f885649fe19a4d1ee6aef8eb99b37cbde5bbca544e1f54a9f70f7712bab6dfc3b81fb2001d049be98d549ac981bf994c290a5853238"], ["updated_at", Mon, 18 Feb 2013 03:57:44 UTC +00:00], ["username", "Tammi"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 197ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-17 22:57:44 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:44 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 22:57:44 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:44 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:44 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:44 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:44 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:44 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:44 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:45 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:45 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-02-17 22:57:47 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (9.0ms)
+  Rendered users/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 22:57:48 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:48 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:48 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:48 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:48 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:48 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:48 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:48 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:48 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 22:57:48 -0500
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-02-17 23:10:19 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TbbU1KKl7B39yeu+df3lo3cVR/RZ/9LWtEALX+itxI=", "user"=>{"username"=>"Andrew", "email"=>"Andrew@Andrew.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "lease_id"=>"2"}, "commit"=>"Create User"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('Andrew@Andrew.org') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('Andrew') LIMIT 1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."persistence_token" = '113aafcdabf24b864a289ef8432977487edfe505dbe2a4aa037ebb6996c39380f89b117174212108b981e84173306b4badb81c90861dca0b9975dc6a9c451f3f' LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '3ca3f77e4c545a4b9dbeed2f9aa34f6eae7186375f6266c2dedd3efed591af4a2b937d32e0f3686b7b6e214427f197721dcaf44a80847daaa2d4ce964c1ad84d' LIMIT 1[0m
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "lease_id", "password_salt", "persistence_token", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Mon, 18 Feb 2013 04:10:19 UTC +00:00], ["crypted_password", "2d5bf8e6c8d4eb5d2f4ad29b2afe32f8a6a45fa4e2f1dc3997cf8f3c94787cc56f39bb0266c76dc6d2903a8f0bbf874547050a1135a9eadfa99153bf5b5644c4"], ["email", "Andrew@Andrew.org"], ["lease_id", 2], ["password_salt", "dtzun5b0CicSPgyFGmy"], ["persistence_token", "113aafcdabf24b864a289ef8432977487edfe505dbe2a4aa037ebb6996c39380f89b117174212108b981e84173306b4badb81c90861dca0b9975dc6a9c451f3f"], ["updated_at", Mon, 18 Feb 2013 04:10:19 UTC +00:00], ["username", "Andrew"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-17 23:10:19 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:10:19 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:10:19 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:10:19 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:10:19 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:10:19 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:10:19 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:10:19 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:10:19 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:10:20 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:10:20 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/leases" for 127.0.0.1 at 2013-02-17 23:11:13 -0500
+Processing by LeasesController#index as HTML
+  [1m[36mLease Load (1.0ms)[0m  [1mSELECT "leases".* FROM "leases" [0m
+  Rendered leases/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 30.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:11:13 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:13 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:13 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:13 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:13 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:13 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:13 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:14 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:14 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:14 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/leases/new" for 127.0.0.1 at 2013-02-17 23:11:16 -0500
+Processing by LeasesController#new as HTML
+  Rendered leases/_form.html.erb (16.0ms)
+  Rendered leases/new.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 78ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:11:16 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:16 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:16 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:16 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:16 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:16 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:16 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:16 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:17 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:11:17 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/leases" for 127.0.0.1 at 2013-02-17 23:11:28 -0500
+Processing by LeasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TbbU1KKl7B39yeu+df3lo3cVR/RZ/9LWtEALX+itxI=", "lease"=>{"start_date(1i)"=>"2013", "start_date(2i)"=>"2", "start_date(3i)"=>"18", "end_date(1i)"=>"2014", "end_date(2i)"=>"2", "end_date(3i)"=>"18", "rent"=>"1", "unit_id"=>"1"}, "commit"=>"Create Lease"}
+Completed 500 Internal Server Error in 1ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: unit_id):
+  app/controllers/leases_controller.rb:43:in `new'
+  app/controllers/leases_controller.rb:43:in `create'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started POST "/leases" for 127.0.0.1 at 2013-02-17 23:12:20 -0500
+Processing by LeasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TbbU1KKl7B39yeu+df3lo3cVR/RZ/9LWtEALX+itxI=", "lease"=>{"start_date(1i)"=>"2013", "start_date(2i)"=>"2", "start_date(3i)"=>"18", "end_date(1i)"=>"2014", "end_date(2i)"=>"2", "end_date(3i)"=>"18", "rent"=>"1", "unit_id"=>"1"}, "commit"=>"Create Lease"}
+Completed 500 Internal Server Error in 2ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: unit_id):
+  app/controllers/leases_controller.rb:43:in `new'
+  app/controllers/leases_controller.rb:43:in `create'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started POST "/leases" for 127.0.0.1 at 2013-02-17 23:12:28 -0500
+Processing by LeasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TbbU1KKl7B39yeu+df3lo3cVR/RZ/9LWtEALX+itxI=", "lease"=>{"start_date(1i)"=>"2013", "start_date(2i)"=>"2", "start_date(3i)"=>"18", "end_date(1i)"=>"2014", "end_date(2i)"=>"2", "end_date(3i)"=>"18", "rent"=>"1", "unit_id"=>"1"}, "commit"=>"Create Lease"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (18.0ms)[0m  [1mINSERT INTO "leases" ("created_at", "end_date", "rent", "start_date", "unit_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 18 Feb 2013 04:12:28 UTC +00:00], ["end_date", Tue, 18 Feb 2014], ["rent", 1], ["start_date", Mon, 18 Feb 2013], ["unit_id", 1], ["updated_at", Mon, 18 Feb 2013 04:12:28 UTC +00:00]]
+  [1m[35m (8.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/leases/1
+Completed 302 Found in 51ms (ActiveRecord: 27.0ms)
+
+
+Started GET "/leases/1" for 127.0.0.1 at 2013-02-17 23:12:28 -0500
+Processing by LeasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLease Load (0.0ms)[0m  [1mSELECT "leases".* FROM "leases" WHERE "leases"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered leases/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:28 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:12:28 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:28 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:28 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:28 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:28 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:28 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:28 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:28 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/leases" for 127.0.0.1 at 2013-02-17 23:12:32 -0500
+Processing by LeasesController#index as HTML
+  [1m[35mLease Load (0.0ms)[0m  SELECT "leases".* FROM "leases" 
+  Rendered leases/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:12:32 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:32 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:32 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:32 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:32 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:32 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:32 -0500
+Served asset /units.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:33 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:33 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:12:33 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/leases" for 127.0.0.1 at 2013-02-17 23:15:23 -0500
+Processing by LeasesController#index as HTML
+  [1m[36mLease Load (0.0ms)[0m  [1mSELECT "leases".* FROM "leases" [0m
+  Rendered leases/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:23 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:23 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:15:23 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:23 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:23 -0500
+Served asset /repair_requests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:23 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:24 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:24 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:24 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:24 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/units" for 127.0.0.1 at 2013-02-17 23:15:28 -0500
+Processing by UnitsController#index as HTML
+  [1m[35mUnit Load (0.0ms)[0m  SELECT "units".* FROM "units" 
+  Rendered units/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 30.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:15:28 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:28 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:28 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:28 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:29 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:29 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:29 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:29 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:29 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/units/new" for 127.0.0.1 at 2013-02-17 23:15:31 -0500
+Processing by UnitsController#new as HTML
+  Rendered units/_form.html.erb (10.0ms)
+  Rendered units/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 102ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:15:32 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:32 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:32 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:32 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:32 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:32 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:32 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:32 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:32 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:32 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/units" for 127.0.0.1 at 2013-02-17 23:15:44 -0500
+Processing by UnitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TbbU1KKl7B39yeu+df3lo3cVR/RZ/9LWtEALX+itxI=", "unit"=>{"name"=>"Apt A1", "square_feet"=>"750"}, "commit"=>"Create Unit"}
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "units" ("created_at", "name", "property_id", "square_feet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Mon, 18 Feb 2013 04:15:44 UTC +00:00], ["name", "Apt A1"], ["property_id", nil], ["square_feet", 750], ["updated_at", Mon, 18 Feb 2013 04:15:44 UTC +00:00]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/units/1
+Completed 302 Found in 25ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/units/1" for 127.0.0.1 at 2013-02-17 23:15:44 -0500
+Processing by UnitsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUnit Load (1.0ms)[0m  SELECT "units".* FROM "units" WHERE "units"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered units/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 27.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:15:44 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:44 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:44 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:44 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:44 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:44 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:44 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:44 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:44 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:44 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/units" for 127.0.0.1 at 2013-02-17 23:15:50 -0500
+Processing by UnitsController#index as HTML
+  [1m[36mUnit Load (0.0ms)[0m  [1mSELECT "units".* FROM "units" [0m
+  Rendered units/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:15:50 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:50 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:50 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:50 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:50 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:50 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:50 -0500
+Served asset /units.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:50 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:51 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:51 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/units/new" for 127.0.0.1 at 2013-02-17 23:15:52 -0500
+Processing by UnitsController#new as HTML
+  Rendered units/_form.html.erb (3.0ms)
+  Rendered units/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 18ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:15:52 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:52 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:52 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:52 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:52 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:52 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:52 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:53 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:53 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:15:53 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/units" for 127.0.0.1 at 2013-02-17 23:16:01 -0500
+Processing by UnitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TbbU1KKl7B39yeu+df3lo3cVR/RZ/9LWtEALX+itxI=", "unit"=>{"name"=>"Apt A2", "square_feet"=>"1000"}, "commit"=>"Create Unit"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "units" ("created_at", "name", "property_id", "square_feet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Mon, 18 Feb 2013 04:16:01 UTC +00:00], ["name", "Apt A2"], ["property_id", nil], ["square_feet", 1000], ["updated_at", Mon, 18 Feb 2013 04:16:01 UTC +00:00]]
+  [1m[35m (346.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/units/2
+Completed 302 Found in 357ms (ActiveRecord: 349.0ms)
+
+
+Started GET "/units/2" for 127.0.0.1 at 2013-02-17 23:16:01 -0500
+Processing by UnitsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUnit Load (0.0ms)[0m  [1mSELECT "units".* FROM "units" WHERE "units"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered units/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:01 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:16:01 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:02 -0500
+Served asset /leases.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:02 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:02 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:02 -0500
+Served asset /repair_requests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:02 -0500
+Served asset /units.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:02 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:02 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:02 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/properties" for 127.0.0.1 at 2013-02-17 23:16:05 -0500
+Processing by PropertiesController#index as HTML
+  [1m[35mProperty Load (1.0ms)[0m  SELECT "properties".* FROM "properties" 
+  Rendered properties/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:16:05 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:05 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:05 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:05 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:05 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:05 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:05 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:05 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:06 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:06 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/properties/new" for 127.0.0.1 at 2013-02-17 23:16:46 -0500
+Processing by PropertiesController#new as HTML
+  Rendered properties/_form.html.erb (14.0ms)
+  Rendered properties/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 87ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:16:46 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:46 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:46 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:46 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:46 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:46 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:46 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:46 -0500
+Served asset /user_sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:47 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:16:47 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/properties" for 127.0.0.1 at 2013-02-17 23:17:38 -0500
+Processing by PropertiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TbbU1KKl7B39yeu+df3lo3cVR/RZ/9LWtEALX+itxI=", "property"=>{"name"=>"Landmark Apartments", "address"=>"1991 Boulder Dr.", "city"=>"Indianapolis", "state"=>"IN", "zip"=>"46260"}, "commit"=>"Create Property"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "properties" ("address", "city", "created_at", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?)  [["address", "1991 Boulder Dr."], ["city", "Indianapolis"], ["created_at", Mon, 18 Feb 2013 04:17:38 UTC +00:00], ["name", "Landmark Apartments"], ["state", "IN"], ["updated_at", Mon, 18 Feb 2013 04:17:38 UTC +00:00], ["zip", "46260"]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/properties/1
+Completed 302 Found in 30ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/properties/1" for 127.0.0.1 at 2013-02-17 23:17:38 -0500
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProperty Load (1.0ms)[0m  SELECT "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered properties/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:17:38 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:38 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:39 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:39 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:39 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:39 -0500
+Served asset /repair_requests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:39 -0500
+Served asset /units.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:39 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:39 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:39 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/repair_requests" for 127.0.0.1 at 2013-02-17 23:17:40 -0500
+Processing by RepairRequestsController#index as HTML
+  [1m[36mRepairRequest Load (1.0ms)[0m  [1mSELECT "repair_requests".* FROM "repair_requests" [0m
+  Rendered repair_requests/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 30.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:17:41 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:41 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:41 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:41 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:41 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:41 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:41 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:41 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:41 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:41 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/repair_requests/new" for 127.0.0.1 at 2013-02-17 23:17:43 -0500
+Processing by RepairRequestsController#new as HTML
+  Rendered repair_requests/_form.html.erb (10.0ms)
+  Rendered repair_requests/new.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 83ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:17:43 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:43 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:43 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:43 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:43 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:43 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:43 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:43 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:43 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:17:43 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/repair_requests/new" for 127.0.0.1 at 2013-02-17 23:18:25 -0500
+Processing by RepairRequestsController#new as HTML
+  Rendered repair_requests/_form.html.erb (45.0ms)
+  Rendered repair_requests/new.html.erb within layouts/application (49.0ms)
+Compiled application.css  (0ms)  (pid 9380)
+Completed 200 OK in 98ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:18:25 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:18:25 -0500
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:18:25 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:18:25 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:18:25 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:18:25 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:18:25 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:18:26 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:18:26 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:18:26 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/repair_requests" for 127.0.0.1 at 2013-02-17 23:19:18 -0500
+Processing by RepairRequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TbbU1KKl7B39yeu+df3lo3cVR/RZ/9LWtEALX+itxI=", "repair_request"=>{"open_date(1i)"=>"2013", "open_date(2i)"=>"2", "open_date(3i)"=>"18", "close_date(1i)"=>"2013", "close_date(2i)"=>"2", "close_date(3i)"=>"18", "request_details"=>"Leaking faucet in bathroom", "request_response"=>"Dispatched handyman who added a washer.", "submitter_id"=>"1", "responder_id"=>"1"}, "commit"=>"Create Repair request"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "repair_requests" ("close_date", "created_at", "open_date", "request_details", "request_response", "responder_id", "submitter_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["close_date", Mon, 18 Feb 2013], ["created_at", Mon, 18 Feb 2013 04:19:18 UTC +00:00], ["open_date", Mon, 18 Feb 2013], ["request_details", "Leaking faucet in bathroom"], ["request_response", "Dispatched handyman who added a washer."], ["responder_id", 1], ["submitter_id", 1], ["updated_at", Mon, 18 Feb 2013 04:19:18 UTC +00:00]]
+  [1m[35m (9.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/repair_requests/1
+Completed 302 Found in 16ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/repair_requests/1" for 127.0.0.1 at 2013-02-17 23:19:18 -0500
+Processing by RepairRequestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRepairRequest Load (1.0ms)[0m  [1mSELECT "repair_requests".* FROM "repair_requests" WHERE "repair_requests"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered repair_requests/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:19:18 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:19 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:19 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:19 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:19 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:19 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:19 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:19 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:19 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:19 -0500
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/repair_requests" for 127.0.0.1 at 2013-02-17 23:19:23 -0500
+Processing by RepairRequestsController#index as HTML
+  [1m[35mRepairRequest Load (1.0ms)[0m  SELECT "repair_requests".* FROM "repair_requests" 
+  Rendered repair_requests/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:19:23 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:23 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:24 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:24 -0500
+Served asset /leases.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:24 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:24 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:24 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:24 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:24 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:24 -0500
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-02-17 23:19:28 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 38ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 23:19:28 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:28 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:28 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:28 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:28 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:28 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:28 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:29 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 23:19:29 -0500
+Served asset /application.js - 304 Not Modified (2ms)
