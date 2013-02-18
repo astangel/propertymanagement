@@ -12,6 +12,9 @@ Propertymanagement::Application.routes.draw do
   resources :properties
   
   root :to => 'users#index'
+  
+  match 'login', :to => 'user_sessions#new'
+  match 'logout', :to => 'user_session#destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

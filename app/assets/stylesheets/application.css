@@ -108,4 +108,4 @@ h1 {
 
 #navigation div {display:block; float:left; min-width:30px; padding: .5em 1em;}
 #navigation div:hover {background-color:#DAC8BF;}
-#login {float:right;}
+#login, #navigation #login, #register, #navigation #register, #logout, #navigation #logout {float:right;}
