@@ -3555,3 +3555,2441 @@ ActionController::RoutingError (uninitialized constant UserSessionController):
 
 
   Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-18 07:51:26 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+ERROR: compiling _app_views_layouts_application_html_erb__587705110_47911920 RAISED c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:41: unknown regexp options - dv
+unmatched close parenthesis: /div>
+	<div id="logout">
+	 	 ');@output_buffer.append= (# link_to "Logout", logout_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	 	 
+');	   else 
+@output_buffer.safe_concat('	<div id="register">
+		');@output_buffer.append= (# link_to "Register", new_user_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('   </i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+    <div id="login">
+     ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: syntax error, unexpected '<', expecting ')'
+    </div-->
+     ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:50: unknown regexp options - dv
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:51: syntax error, unexpected '<'
+  <!-- End Naviagtion -->
+   ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:51: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+  <!-- End Naviagtion -->
+                     ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:51: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:53: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+  <!-- Begin Content -->
+                    ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:53: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:57: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...er.safe_concat('        <div id=\'error\'>');@output_buffer....
+...                               ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:84: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_layouts_application_html_erb__587705110_47911920(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+<head>
+  <title>Propertymanagement</title>
+  ');@output_buffer.append= ( stylesheet_link_tag    "application", :media => "all" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+
+  <!-- Begin Header -->
+  <div id="header">
+
+    This is the Header
+
+  </div>
+  <!-- End Header -->
+
+  <!-- Begin Naviagtion -->
+  <div id="navigation">
+    <div id="home"><a href="/">Home</a></div>
+    <div>');@output_buffer.append= ( link_to 'Users', users_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Leases', leases_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Units', units_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Properties', properties_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Repair Requests', repair_requests_path );@output_buffer.safe_concat('</div>
+
+
+');
+@output_buffer.safe_concat('    <!--div id="login">	
+	  	');@output_buffer.append= (# link_to "Edit Profile", edit_user_path(:current) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</div>
+	<div id="logout">
+	 	 ');@output_buffer.append= (# link_to "Logout", logout_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	 	 
+');	   else 
+@output_buffer.safe_concat('	<div id="register">
+		');@output_buffer.append= (# link_to "Register", new_user_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('   </div>
+    <div id="login">
+		');@output_buffer.append= (# link_to "Login", login_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	
+');	   #end 
+@output_buffer.safe_concat('
+    </div-->
+
+
+  </div>
+  <!-- End Naviagtion -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+');     if flash[:error] 
+@output_buffer.safe_concat('        <div id=\'error\'>');@output_buffer.append= (h flash[:error] );@output_buffer.safe_concat('</div>
+');     end 
+     if flash[:notice] 
+@output_buffer.safe_concat('        <div id=\'notice\'>');@output_buffer.append= (h flash[:notice] );@output_buffer.safe_concat('</div>
+');     end 
+@output_buffer.safe_concat('    
+');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+
+  </div>
+  <!-- End Content -->
+
+  <!-- Begin Footer -->
+  <div id="footer">
+
+    This is the Footer
+
+  </div>
+  <!-- End Footer -->
+
+</div>
+<!-- End Wrapper -->
+
+</body>
+</html>
+
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:285:in `module_eval'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:285:in `compile'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:233:in `compile!'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:142:in `block in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:125:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:141:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:53:in `render_with_layout'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:39:in `render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:12:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/renderer.rb:36:in `render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/renderer.rb:17:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:109:in `_render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:88:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rendering.rb:16:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:39:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:195:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/controllers/users_controller.rb:7:in `index'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/base.rb:167:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:425:in `_run__27409158__process_action__441182983__callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `block in instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/base.rb:121:in `process'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:45:in `process'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal.rb:203:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal.rb:246:in `block in action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:66:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:30:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:589:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/head.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/flash.rb:242:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/query_cache.rb:64:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `_run__576178853__call__978514949__callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:26:in `call_app'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:16:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/static.rb:53:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/engine.rb:479:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application.rb:220:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/log_tailer.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:41: unknown regexp options - dv
+unmatched close parenthesis: /div>
+	<div id="logout">
+	 	 ');@output_buffer.append= (# link_to "Logout", logout_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	 	 
+');	   else 
+@output_buffer.safe_concat('	<div id="register">
+		');@output_buffer.append= (# link_to "Register", new_user_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('   </i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+    <div id="login">
+     ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: syntax error, unexpected '<', expecting ')'
+    </div-->
+     ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:50: unknown regexp options - dv
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:51: syntax error, unexpected '<'
+  <!-- End Naviagtion -->
+   ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:51: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+  <!-- End Naviagtion -->
+                     ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:51: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:53: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+  <!-- Begin Content -->
+                    ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:53: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:57: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...er.safe_concat('        <div id=\'error\'>');@output_buffer....
+...                               ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:84: syntax error, unexpected keyword_ensure, expecting $end):
+    38: 	  <% else %>
+    39: 	<div id="register">
+    40: 		<%=# link_to "Register", new_user_path %>
+    41:    </div>
+    42:     <div id="login">
+    43: 		<%=# link_to "Login", login_path %>
+    44: 	
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-18 07:51:57 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+ERROR: compiling _app_views_layouts_application_html_erb__587705110_51086364 RAISED c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:39: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+@output_buffer.safe_concat('	<div id="register">
+                            	       ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: unknown regexp options - dv
+unmatched close parenthesis: /div>
+    <div id="login">
+');
+@output_buffer.safe_concat('	
+');	   #end 
+@output_buffer.safe_concat('
+    </i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:57: unknown regexp options - dv
+unmatched close parenthesis: /div>
+  <!-- End Naviagtion -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+');     if flash[:error] 
+@output_buffer.safe_concat('        <div id=\'error\'>');@output_buffer.append= (h flash[:error] );@output_buffer.safe_concat('</i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...er.safe_concat('        <div id=\'notice\'>');@output_buffer...
+...                               ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:84: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_layouts_application_html_erb__587705110_51086364(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+<head>
+  <title>Propertymanagement</title>
+  ');@output_buffer.append= ( stylesheet_link_tag    "application", :media => "all" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+
+  <!-- Begin Header -->
+  <div id="header">
+
+    This is the Header
+
+  </div>
+  <!-- End Header -->
+
+  <!-- Begin Naviagtion -->
+  <div id="navigation">
+    <div id="home"><a href="/">Home</a></div>
+    <div>');@output_buffer.append= ( link_to 'Users', users_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Leases', leases_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Units', units_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Properties', properties_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Repair Requests', repair_requests_path );@output_buffer.safe_concat('</div>
+
+
+');
+@output_buffer.safe_concat('    <!--div id="login">	
+');
+@output_buffer.safe_concat('	</div>
+	<div id="logout">
+	 	 ');@output_buffer.append= (# link_to "Logout", logout_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	 	 
+');
+@output_buffer.safe_concat('	<div id="register">
+');
+@output_buffer.safe_concat('   </div>
+    <div id="login">
+');
+@output_buffer.safe_concat('	
+');	   #end 
+@output_buffer.safe_concat('
+    </div-->
+
+
+  </div>
+  <!-- End Naviagtion -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+');     if flash[:error] 
+@output_buffer.safe_concat('        <div id=\'error\'>');@output_buffer.append= (h flash[:error] );@output_buffer.safe_concat('</div>
+');     end 
+     if flash[:notice] 
+@output_buffer.safe_concat('        <div id=\'notice\'>');@output_buffer.append= (h flash[:notice] );@output_buffer.safe_concat('</div>
+');     end 
+@output_buffer.safe_concat('    
+');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+
+  </div>
+  <!-- End Content -->
+
+  <!-- Begin Footer -->
+  <div id="footer">
+
+    This is the Footer
+
+  </div>
+  <!-- End Footer -->
+
+</div>
+<!-- End Wrapper -->
+
+</body>
+</html>
+
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:285:in `module_eval'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:285:in `compile'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:233:in `compile!'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:142:in `block in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:125:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:141:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:53:in `render_with_layout'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:39:in `render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:12:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/renderer.rb:36:in `render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/renderer.rb:17:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:109:in `_render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:88:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rendering.rb:16:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:39:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:195:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/controllers/users_controller.rb:7:in `index'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/base.rb:167:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:425:in `_run__27409158__process_action__441182983__callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `block in instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/base.rb:121:in `process'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:45:in `process'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal.rb:203:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal.rb:246:in `block in action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:66:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:30:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:589:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/head.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/flash.rb:242:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/query_cache.rb:64:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `_run__576178853__call__978514949__callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:26:in `call_app'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:16:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/static.rb:53:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/engine.rb:479:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application.rb:220:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/log_tailer.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:39: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+@output_buffer.safe_concat('	<div id="register">
+                            	       ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: unknown regexp options - dv
+unmatched close parenthesis: /div>
+    <div id="login">
+');
+@output_buffer.safe_concat('	
+');	   #end 
+@output_buffer.safe_concat('
+    </i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:57: unknown regexp options - dv
+unmatched close parenthesis: /div>
+  <!-- End Naviagtion -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+');     if flash[:error] 
+@output_buffer.safe_concat('        <div id=\'error\'>');@output_buffer.append= (h flash[:error] );@output_buffer.safe_concat('</i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...er.safe_concat('        <div id=\'notice\'>');@output_buffer...
+...                               ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:84: syntax error, unexpected keyword_ensure, expecting $end):
+    36: 	 	 <%=# link_to "Logout", logout_path %>
+    37: 	 	 
+    38: 	  <%# else %>
+    39: 	<div id="register">
+    40: 		<%#= link_to "Register", new_user_path %>
+    41:    </div>
+    42:     <div id="login">
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-18 07:51:58 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+ERROR: compiling _app_views_layouts_application_html_erb__587705110_51086364 RAISED c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:39: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+@output_buffer.safe_concat('	<div id="register">
+                            	       ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: unknown regexp options - dv
+unmatched close parenthesis: /div>
+    <div id="login">
+');
+@output_buffer.safe_concat('	
+');	   #end 
+@output_buffer.safe_concat('
+    </i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:57: unknown regexp options - dv
+unmatched close parenthesis: /div>
+  <!-- End Naviagtion -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+');     if flash[:error] 
+@output_buffer.safe_concat('        <div id=\'error\'>');@output_buffer.append= (h flash[:error] );@output_buffer.safe_concat('</i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...er.safe_concat('        <div id=\'notice\'>');@output_buffer...
+...                               ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:84: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_layouts_application_html_erb__587705110_51086364(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+<head>
+  <title>Propertymanagement</title>
+  ');@output_buffer.append= ( stylesheet_link_tag    "application", :media => "all" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+
+  <!-- Begin Header -->
+  <div id="header">
+
+    This is the Header
+
+  </div>
+  <!-- End Header -->
+
+  <!-- Begin Naviagtion -->
+  <div id="navigation">
+    <div id="home"><a href="/">Home</a></div>
+    <div>');@output_buffer.append= ( link_to 'Users', users_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Leases', leases_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Units', units_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Properties', properties_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Repair Requests', repair_requests_path );@output_buffer.safe_concat('</div>
+
+
+');
+@output_buffer.safe_concat('    <!--div id="login">	
+');
+@output_buffer.safe_concat('	</div>
+	<div id="logout">
+	 	 ');@output_buffer.append= (# link_to "Logout", logout_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	 	 
+');
+@output_buffer.safe_concat('	<div id="register">
+');
+@output_buffer.safe_concat('   </div>
+    <div id="login">
+');
+@output_buffer.safe_concat('	
+');	   #end 
+@output_buffer.safe_concat('
+    </div-->
+
+
+  </div>
+  <!-- End Naviagtion -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+');     if flash[:error] 
+@output_buffer.safe_concat('        <div id=\'error\'>');@output_buffer.append= (h flash[:error] );@output_buffer.safe_concat('</div>
+');     end 
+     if flash[:notice] 
+@output_buffer.safe_concat('        <div id=\'notice\'>');@output_buffer.append= (h flash[:notice] );@output_buffer.safe_concat('</div>
+');     end 
+@output_buffer.safe_concat('    
+');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+
+  </div>
+  <!-- End Content -->
+
+  <!-- Begin Footer -->
+  <div id="footer">
+
+    This is the Footer
+
+  </div>
+  <!-- End Footer -->
+
+</div>
+<!-- End Wrapper -->
+
+</body>
+</html>
+
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:285:in `module_eval'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:285:in `compile'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:233:in `compile!'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:142:in `block in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:125:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:141:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:53:in `render_with_layout'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:39:in `render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:12:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/renderer.rb:36:in `render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/renderer.rb:17:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:109:in `_render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:88:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rendering.rb:16:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:39:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:195:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/controllers/users_controller.rb:7:in `index'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/base.rb:167:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:425:in `_run__27409158__process_action__441182983__callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `block in instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/base.rb:121:in `process'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:45:in `process'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal.rb:203:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal.rb:246:in `block in action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:66:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:30:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:589:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/head.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/flash.rb:242:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/query_cache.rb:64:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `_run__576178853__call__978514949__callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:26:in `call_app'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:16:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/static.rb:53:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/engine.rb:479:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application.rb:220:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/log_tailer.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:39: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+@output_buffer.safe_concat('	<div id="register">
+                            	       ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: unknown regexp options - dv
+unmatched close parenthesis: /div>
+    <div id="login">
+');
+@output_buffer.safe_concat('	
+');	   #end 
+@output_buffer.safe_concat('
+    </i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:57: unknown regexp options - dv
+unmatched close parenthesis: /div>
+  <!-- End Naviagtion -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+');     if flash[:error] 
+@output_buffer.safe_concat('        <div id=\'error\'>');@output_buffer.append= (h flash[:error] );@output_buffer.safe_concat('</i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...er.safe_concat('        <div id=\'notice\'>');@output_buffer...
+...                               ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:84: syntax error, unexpected keyword_ensure, expecting $end):
+    36: 	 	 <%=# link_to "Logout", logout_path %>
+    37: 	 	 
+    38: 	  <%# else %>
+    39: 	<div id="register">
+    40: 		<%#= link_to "Register", new_user_path %>
+    41:    </div>
+    42:     <div id="login">
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-18 18:00:28 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (5.0ms)
+ERROR: compiling _app_views_layouts_application_html_erb__587705110_51086364 RAISED c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:39: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+@output_buffer.safe_concat('	<div id="register">
+                            	       ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: unknown regexp options - dv
+unmatched close parenthesis: /div>
+    <div id="login">
+');
+@output_buffer.safe_concat('	
+');	   #end 
+@output_buffer.safe_concat('
+    </i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:57: unknown regexp options - dv
+unmatched close parenthesis: /div>
+  <!-- End Naviagtion -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+');     if flash[:error] 
+@output_buffer.safe_concat('        <div id=\'error\'>');@output_buffer.append= (h flash[:error] );@output_buffer.safe_concat('</i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...er.safe_concat('        <div id=\'notice\'>');@output_buffer...
+...                               ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:84: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_layouts_application_html_erb__587705110_51086364(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+<head>
+  <title>Propertymanagement</title>
+  ');@output_buffer.append= ( stylesheet_link_tag    "application", :media => "all" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+
+  <!-- Begin Header -->
+  <div id="header">
+
+    This is the Header
+
+  </div>
+  <!-- End Header -->
+
+  <!-- Begin Naviagtion -->
+  <div id="navigation">
+    <div id="home"><a href="/">Home</a></div>
+    <div>');@output_buffer.append= ( link_to 'Users', users_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Leases', leases_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Units', units_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Properties', properties_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Repair Requests', repair_requests_path );@output_buffer.safe_concat('</div>
+
+
+');
+@output_buffer.safe_concat('    <!--div id="login">	
+');
+@output_buffer.safe_concat('	</div>
+	<div id="logout">
+	 	 ');@output_buffer.append= (# link_to "Logout", logout_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	 	 
+');
+@output_buffer.safe_concat('	<div id="register">
+');
+@output_buffer.safe_concat('   </div>
+    <div id="login">
+');
+@output_buffer.safe_concat('	
+');	   #end 
+@output_buffer.safe_concat('
+    </div-->
+
+
+  </div>
+  <!-- End Naviagtion -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+');     if flash[:error] 
+@output_buffer.safe_concat('        <div id=\'error\'>');@output_buffer.append= (h flash[:error] );@output_buffer.safe_concat('</div>
+');     end 
+     if flash[:notice] 
+@output_buffer.safe_concat('        <div id=\'notice\'>');@output_buffer.append= (h flash[:notice] );@output_buffer.safe_concat('</div>
+');     end 
+@output_buffer.safe_concat('    
+');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+
+  </div>
+  <!-- End Content -->
+
+  <!-- Begin Footer -->
+  <div id="footer">
+
+    This is the Footer
+
+  </div>
+  <!-- End Footer -->
+
+</div>
+<!-- End Wrapper -->
+
+</body>
+</html>
+
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:285:in `module_eval'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:285:in `compile'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:233:in `compile!'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:142:in `block in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:125:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:141:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:53:in `render_with_layout'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:39:in `render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:12:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/renderer.rb:36:in `render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/renderer.rb:17:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:109:in `_render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:88:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rendering.rb:16:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:39:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:195:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/controllers/users_controller.rb:7:in `index'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/base.rb:167:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:425:in `_run__27409158__process_action__441182983__callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `block in instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/base.rb:121:in `process'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:45:in `process'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal.rb:203:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal.rb:246:in `block in action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:66:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:30:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:589:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/head.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/flash.rb:242:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/query_cache.rb:64:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `_run__576178853__call__978514949__callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:26:in `call_app'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:16:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/static.rb:53:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/engine.rb:479:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application.rb:220:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/log_tailer.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:39: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+@output_buffer.safe_concat('	<div id="register">
+                            	       ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: unknown regexp options - dv
+unmatched close parenthesis: /div>
+    <div id="login">
+');
+@output_buffer.safe_concat('	
+');	   #end 
+@output_buffer.safe_concat('
+    </i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:57: unknown regexp options - dv
+unmatched close parenthesis: /div>
+  <!-- End Naviagtion -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+');     if flash[:error] 
+@output_buffer.safe_concat('        <div id=\'error\'>');@output_buffer.append= (h flash[:error] );@output_buffer.safe_concat('</i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...er.safe_concat('        <div id=\'notice\'>');@output_buffer...
+...                               ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:84: syntax error, unexpected keyword_ensure, expecting $end):
+    36: 	 	 <%=# link_to "Logout", logout_path %>
+    37: 	 	 
+    38: 	  <%# else %>
+    39: 	<div id="register">
+    40: 		<%#= link_to "Register", new_user_path %>
+    41:    </div>
+    42:     <div id="login">
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-18 18:01:12 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+ERROR: compiling _app_views_layouts_application_html_erb__587705110_51086364 RAISED c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:39: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+@output_buffer.safe_concat('	<div id="register">
+                            	       ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: unknown regexp options - dv
+unmatched close parenthesis: /div>
+    <div id="login">
+');
+@output_buffer.safe_concat('	
+');	   #end 
+@output_buffer.safe_concat('
+    </i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:57: unknown regexp options - dv
+unmatched close parenthesis: /div>
+  <!-- End Naviagtion -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+');     if flash[:error] 
+@output_buffer.safe_concat('        <div id=\'error\'>');@output_buffer.append= (h flash[:error] );@output_buffer.safe_concat('</i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...er.safe_concat('        <div id=\'notice\'>');@output_buffer...
+...                               ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:84: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_layouts_application_html_erb__587705110_51086364(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+<head>
+  <title>Propertymanagement</title>
+  ');@output_buffer.append= ( stylesheet_link_tag    "application", :media => "all" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+
+  <!-- Begin Header -->
+  <div id="header">
+
+    This is the Header
+
+  </div>
+  <!-- End Header -->
+
+  <!-- Begin Naviagtion -->
+  <div id="navigation">
+    <div id="home"><a href="/">Home</a></div>
+    <div>');@output_buffer.append= ( link_to 'Users', users_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Leases', leases_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Units', units_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Properties', properties_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Repair Requests', repair_requests_path );@output_buffer.safe_concat('</div>
+
+
+');
+@output_buffer.safe_concat('    <!--div id="login">	
+');
+@output_buffer.safe_concat('	</div>
+	<div id="logout">
+	 	 ');@output_buffer.append= (# link_to "Logout", logout_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	 	 
+');
+@output_buffer.safe_concat('	<div id="register">
+');
+@output_buffer.safe_concat('   </div>
+    <div id="login">
+');
+@output_buffer.safe_concat('	
+');	   #end 
+@output_buffer.safe_concat('
+    </div-->
+
+
+  </div>
+  <!-- End Naviagtion -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+');     if flash[:error] 
+@output_buffer.safe_concat('        <div id=\'error\'>');@output_buffer.append= (h flash[:error] );@output_buffer.safe_concat('</div>
+');     end 
+     if flash[:notice] 
+@output_buffer.safe_concat('        <div id=\'notice\'>');@output_buffer.append= (h flash[:notice] );@output_buffer.safe_concat('</div>
+');     end 
+@output_buffer.safe_concat('    
+');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+
+  </div>
+  <!-- End Content -->
+
+  <!-- Begin Footer -->
+  <div id="footer">
+
+    This is the Footer
+
+  </div>
+  <!-- End Footer -->
+
+</div>
+<!-- End Wrapper -->
+
+</body>
+</html>
+
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:285:in `module_eval'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:285:in `compile'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:233:in `compile!'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:142:in `block in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:125:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:141:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:53:in `render_with_layout'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:39:in `render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:12:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/renderer.rb:36:in `render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/renderer.rb:17:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:109:in `_render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:88:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rendering.rb:16:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:39:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:195:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/controllers/users_controller.rb:7:in `index'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/base.rb:167:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:425:in `_run__27409158__process_action__441182983__callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `block in instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/base.rb:121:in `process'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:45:in `process'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal.rb:203:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal.rb:246:in `block in action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:66:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:30:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:589:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/head.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/flash.rb:242:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/query_cache.rb:64:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `_run__576178853__call__978514949__callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:26:in `call_app'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:16:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/static.rb:53:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/engine.rb:479:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application.rb:220:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/log_tailer.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:39: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+@output_buffer.safe_concat('	<div id="register">
+                            	       ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: unknown regexp options - dv
+unmatched close parenthesis: /div>
+    <div id="login">
+');
+@output_buffer.safe_concat('	
+');	   #end 
+@output_buffer.safe_concat('
+    </i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:57: unknown regexp options - dv
+unmatched close parenthesis: /div>
+  <!-- End Naviagtion -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+');     if flash[:error] 
+@output_buffer.safe_concat('        <div id=\'error\'>');@output_buffer.append= (h flash[:error] );@output_buffer.safe_concat('</i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...er.safe_concat('        <div id=\'notice\'>');@output_buffer...
+...                               ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:84: syntax error, unexpected keyword_ensure, expecting $end):
+    36: 	 	 <%=# link_to "Logout", logout_path %>
+    37: 	 	 
+    38: 	  <%# else %>
+    39: 	<div id="register">
+    40: 		<%#= link_to "Register", new_user_path %>
+    41:    </div>
+    42:     <div id="login">
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-02-18 18:01:22 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/new.html.erb within layouts/application (38.0ms)
+ERROR: compiling _app_views_layouts_application_html_erb__587705110_51086364 RAISED c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:39: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+@output_buffer.safe_concat('	<div id="register">
+                            	       ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: unknown regexp options - dv
+unmatched close parenthesis: /div>
+    <div id="login">
+');
+@output_buffer.safe_concat('	
+');	   #end 
+@output_buffer.safe_concat('
+    </i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:57: unknown regexp options - dv
+unmatched close parenthesis: /div>
+  <!-- End Naviagtion -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+');     if flash[:error] 
+@output_buffer.safe_concat('        <div id=\'error\'>');@output_buffer.append= (h flash[:error] );@output_buffer.safe_concat('</i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...er.safe_concat('        <div id=\'notice\'>');@output_buffer...
+...                               ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:84: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_layouts_application_html_erb__587705110_51086364(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+<head>
+  <title>Propertymanagement</title>
+  ');@output_buffer.append= ( stylesheet_link_tag    "application", :media => "all" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+
+  <!-- Begin Header -->
+  <div id="header">
+
+    This is the Header
+
+  </div>
+  <!-- End Header -->
+
+  <!-- Begin Naviagtion -->
+  <div id="navigation">
+    <div id="home"><a href="/">Home</a></div>
+    <div>');@output_buffer.append= ( link_to 'Users', users_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Leases', leases_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Units', units_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Properties', properties_path );@output_buffer.safe_concat('</div>
+    <div>');@output_buffer.append= ( link_to 'Repair Requests', repair_requests_path );@output_buffer.safe_concat('</div>
+
+
+');
+@output_buffer.safe_concat('    <!--div id="login">	
+');
+@output_buffer.safe_concat('	</div>
+	<div id="logout">
+	 	 ');@output_buffer.append= (# link_to "Logout", logout_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	 	 
+');
+@output_buffer.safe_concat('	<div id="register">
+');
+@output_buffer.safe_concat('   </div>
+    <div id="login">
+');
+@output_buffer.safe_concat('	
+');	   #end 
+@output_buffer.safe_concat('
+    </div-->
+
+
+  </div>
+  <!-- End Naviagtion -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+');     if flash[:error] 
+@output_buffer.safe_concat('        <div id=\'error\'>');@output_buffer.append= (h flash[:error] );@output_buffer.safe_concat('</div>
+');     end 
+     if flash[:notice] 
+@output_buffer.safe_concat('        <div id=\'notice\'>');@output_buffer.append= (h flash[:notice] );@output_buffer.safe_concat('</div>
+');     end 
+@output_buffer.safe_concat('    
+');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+
+  </div>
+  <!-- End Content -->
+
+  <!-- Begin Footer -->
+  <div id="footer">
+
+    This is the Footer
+
+  </div>
+  <!-- End Footer -->
+
+</div>
+<!-- End Wrapper -->
+
+</body>
+</html>
+
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:285:in `module_eval'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:285:in `compile'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:233:in `compile!'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:142:in `block in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:125:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:141:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:53:in `render_with_layout'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:39:in `render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:12:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/renderer.rb:36:in `render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/renderer.rb:17:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:109:in `_render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:88:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rendering.rb:16:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:39:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:195:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/controllers/users_controller.rb:29:in `new'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/base.rb:167:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:425:in `_run__27409158__process_action__961070291__callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `block in instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/base.rb:121:in `process'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:45:in `process'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal.rb:203:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal.rb:246:in `block in action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:66:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:30:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:589:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/head.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/flash.rb:242:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/query_cache.rb:64:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `_run__576178853__call__978514949__callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:26:in `call_app'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:16:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/static.rb:53:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/engine.rb:479:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application.rb:220:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/log_tailer.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:39: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+@output_buffer.safe_concat('	<div id="register">
+                            	       ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: unknown regexp options - dv
+unmatched close parenthesis: /div>
+    <div id="login">
+');
+@output_buffer.safe_concat('	
+');	   #end 
+@output_buffer.safe_concat('
+    </i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:47: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:57: unknown regexp options - dv
+unmatched close parenthesis: /div>
+  <!-- End Naviagtion -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+');     if flash[:error] 
+@output_buffer.safe_concat('        <div id=\'error\'>');@output_buffer.append= (h flash[:error] );@output_buffer.safe_concat('</i
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...er.safe_concat('        <div id=\'notice\'>');@output_buffer...
+...                               ^
+c:/Users/andrew/Dropbox/Class/CIT 436/Assignment 6/propertymanagement/app/views/layouts/application.html.erb:84: syntax error, unexpected keyword_ensure, expecting $end):
+    36: 	 	 <%=# link_to "Logout", logout_path %>
+    37: 	 	 
+    38: 	  <%# else %>
+    39: 	<div id="register">
+    40: 		<%#= link_to "Register", new_user_path %>
+    41:    </div>
+    42:     <div id="login">
+  app/controllers/users_controller.rb:29:in `new'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-02-18 18:35:01 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 18:35:01 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:01 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:02 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:02 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:02 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:02 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:02 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:02 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:02 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:02 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-18 18:35:06 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:06 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:06 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:06 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:06 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 18:35:06 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:06 -0500
+Served asset /repair_requests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:06 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:06 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:06 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 18:35:06 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-02-18 18:35:16 -0500
+
+ActionController::RoutingError (uninitialized constant UserSessionController):
+  activesupport (3.2.1) lib/active_support/inflector/methods.rb:229:in `block in constantize'
+  activesupport (3.2.1) lib/active_support/inflector/methods.rb:228:in `each'
+  activesupport (3.2.1) lib/active_support/inflector/methods.rb:228:in `constantize'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:62:in `controller_reference'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:47:in `controller'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:26:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:589:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.1) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `_run__576178853__call__978514949__callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2013-02-18 18:57:48 -0500
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TbbU1KKl7B39yeu+df3lo3cVR/RZ/9LWtEALX+itxI=", "user_session"=>{"username"=>"fred", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE (LOWER("users".username) = 'fred') LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-18 18:57:48 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 18:57:48 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 18:57:49 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-18 18:57:49 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 18:57:49 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-18 18:57:49 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-18 18:57:49 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-18 18:57:49 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-18 18:57:49 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-18 18:57:49 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 18:57:49 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-18 19:11:54 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 19:11:54 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 19:11:54 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 19:11:54 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-18 19:11:54 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-18 19:11:54 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-18 19:11:54 -0500
+Served asset /repair_requests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-18 19:11:54 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-18 19:11:54 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-18 19:11:54 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 19:11:54 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-18 19:12:09 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 19:12:09 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 19:12:09 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 19:12:09 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-18 19:12:09 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-18 19:12:09 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-18 19:12:09 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-18 19:12:09 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-18 19:12:09 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-18 19:12:09 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 19:12:09 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/users/current/edit" for 127.0.0.1 at 2013-02-18 19:12:13 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"current"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "current"]]
+Completed 500 Internal Server Error in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=current):
+  app/controllers/users_controller.rb:37:in `edit'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-02-18 19:12:18 -0500
+
+ActionController::RoutingError (uninitialized constant UserSessionController):
+  activesupport (3.2.1) lib/active_support/inflector/methods.rb:229:in `block in constantize'
+  activesupport (3.2.1) lib/active_support/inflector/methods.rb:228:in `each'
+  activesupport (3.2.1) lib/active_support/inflector/methods.rb:228:in `constantize'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:62:in `controller_reference'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:47:in `controller'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:26:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:589:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.1) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `_run__576178853__call__978514949__callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-18 19:14:48 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 29ms (Views: 20.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 19:14:49 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:49 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:49 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:49 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:49 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:49 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:49 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:49 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:49 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:49 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-02-18 19:14:51 -0500
+Processing by UserSessionsController#destroy as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-18 19:14:51 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 19:14:52 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:52 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:52 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:52 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:52 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:52 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:52 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:52 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:52 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 19:14:52 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-18 19:16:33 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 19:16:33 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:33 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:33 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:33 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:33 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:33 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:33 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:33 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:33 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:33 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-18 19:16:36 -0500
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (7.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 19:16:36 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:36 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:36 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:36 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:36 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:36 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:36 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:36 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:37 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:37 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2013-02-18 19:16:42 -0500
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TbbU1KKl7B39yeu+df3lo3cVR/RZ/9LWtEALX+itxI=", "user_session"=>{"username"=>"fred", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE (LOWER("users".username) = 'fred') LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-18 19:16:42 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 19:16:42 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:43 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:43 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:43 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:43 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:43 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:43 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:43 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:43 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:43 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-02-18 19:16:45 -0500
+Processing by UserSessionsController#destroy as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-18 19:16:46 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 19:16:46 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:46 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:46 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:46 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:46 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:46 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:46 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:46 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:46 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:46 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-02-18 19:16:49 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 19:16:49 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:49 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:49 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:49 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:49 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:49 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:49 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:50 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:50 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:50 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-02-18 19:16:52 -0500
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (7.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 19:16:52 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:52 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:52 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:52 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:52 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:52 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:52 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:52 -0500
+Served asset /user_sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:52 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 19:16:52 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2013-02-18 19:17:00 -0500
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TbbU1KKl7B39yeu+df3lo3cVR/RZ/9LWtEALX+itxI=", "user_session"=>{"username"=>"fred", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE (LOWER("users".username) = 'fred') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-18 19:17:00 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 19:17:00 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 19:17:00 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 19:17:00 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-18 19:17:00 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-18 19:17:00 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-18 19:17:00 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-18 19:17:00 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-18 19:17:00 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-18 19:17:01 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 19:17:01 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/current/edit" for 127.0.0.1 at 2013-02-18 19:17:04 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"current"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "current"]]
+Completed 500 Internal Server Error in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=current):
+  app/controllers/users_controller.rb:37:in `edit'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/users/current/edit" for 127.0.0.1 at 2013-02-18 19:22:14 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"current"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 31ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 19:22:14 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 19:22:14 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 19:22:14 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2013-02-18 19:22:14 -0500
+Served asset /properties.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/leases.js?body=1" for 127.0.0.1 at 2013-02-18 19:22:14 -0500
+Served asset /leases.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/repair_requests.js?body=1" for 127.0.0.1 at 2013-02-18 19:22:15 -0500
+Served asset /repair_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/units.js?body=1" for 127.0.0.1 at 2013-02-18 19:22:15 -0500
+Served asset /units.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-02-18 19:22:15 -0500
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-18 19:22:15 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 19:22:15 -0500
+Served asset /application.js - 304 Not Modified (1ms)
