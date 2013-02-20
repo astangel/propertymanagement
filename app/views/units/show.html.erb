@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <b>Name:</b>
   <%= @unit.name %>
@@ -8,6 +6,18 @@
 <p>
   <b>Square feet:</b>
   <%= @unit.square_feet %>
+</p>
+
+<p>
+  <b>Property:</b>
+  <%= @unit.property.name %>
+</p>
+
+<p>
+  <b>Renters</b>
+  <% @unit.renters.each do |c| %>
+    <li><%=c.username%></li>
+  <% end %>
 </p>
 
 

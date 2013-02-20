@@ -4,6 +4,8 @@
   <tr>
     <th>Name</th>
     <th>Square feet</th>
+    <th>Property</th>
+    <th>Renters</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +15,10 @@
   <tr>
     <td><%= unit.name %></td>
     <td><%= unit.square_feet %></td>
+    <td><%= unit.property.name%></td>
+    <td><% unit.renters.each do |c| %>
+      <li><%=c.username%></li>
+    <% end %></td>
     <td><%= link_to 'Show', unit %></td>
     <td><%= link_to 'Edit', edit_unit_path(unit) %></td>
     <td><%= link_to 'Destroy', unit, confirm: 'Are you sure?', method: :delete %></td>

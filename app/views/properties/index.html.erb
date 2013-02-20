@@ -7,6 +7,7 @@
     <th>City</th>
     <th>State</th>
     <th>Zip</th>
+    <th>Units</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,6 +20,9 @@
     <td><%= property.city %></td>
     <td><%= property.state %></td>
     <td><%= property.zip %></td>
+    <td><% property.units.each do |c| %>
+    	  <li><%=c.name%></li>
+    	<% end %></td>
     <td><%= link_to 'Show', property %></td>
     <td><%= link_to 'Edit', edit_property_path(property) %></td>
     <td><%= link_to 'Destroy', property, confirm: 'Are you sure?', method: :delete %></td>

@@ -23,13 +23,13 @@
     <%= f.label :password %><br />
     <%= f.text_field :password %>
   </div>
-  <div class="field" style="padding-bottom:1.5em;margin-bottom:1.5em border-bottom:1px solid #777;">
+  <div class="field" style="padding-bottom:.5em;margin-bottom:.5em; border-bottom:1px solid #444;">
     <%= f.label :password_confirmation %><br />
     <%= f.text_field :password_confirmation %>
   </div>
-  <div class="field">
+  <div class="field" style="margin-bottom:1.5em;">
     <%= f.label :lease_id %><br />
-    <%= f.number_field :lease_id %>
+    <%= f.select :lease_id, Lease.all.collect {|x| [x.unit.name, x.id]}, {:prompt => "Select a property"}, {:id => "sltProperty"} %>
   </div>
   <div class="actions">
     <%= f.submit %>

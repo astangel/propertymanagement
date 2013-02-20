@@ -1,13 +1,11 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <b>Open date:</b>
-  <%= @repair_request.open_date %>
+  <%= @repair_request.open_date.strftime("%m/%d/%Y") %>
 </p>
 
 <p>
   <b>Close date:</b>
-  <%= @repair_request.close_date %>
+  <%= @repair_request.close_date.strftime("%m/%d/%Y") %>
 </p>
 
 <p>
@@ -22,12 +20,12 @@
 
 <p>
   <b>Submitter:</b>
-  <%= @repair_request.submitter_id %>
+  <%= @repair_request.submitter.username %>
 </p>
 
 <p>
   <b>Responder:</b>
-  <%= @repair_request.responder_id %>
+  <%= @repair_request.responder.username %>
 </p>
 
 

@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :unit_id %><br />
-    <%= f.number_field :unit_id %>
+    <%= f.collection_select :unit_id, Unit.all.collect, :id, :name, :prompt => "Select a Unit" %>
   </div>
   <div class="actions">
     <%= f.submit %>

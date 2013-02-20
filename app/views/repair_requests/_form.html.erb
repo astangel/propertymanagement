@@ -29,11 +29,11 @@
   </div>
   <div class="field">
     <%= f.label :submitter_id %><br />
-    <%= f.number_field :submitter_id %>
+    <%= f.collection_select :submitter_id, User.all.collect, :id, :username, :prompt => "Select a Unit" %>
   </div>
   <div class="field">
     <%= f.label :responder_id %><br />
-    <%= f.number_field :responder_id %>
+    <%= f.collection_select :responder_id, User.all.collect, :id, :username, :prompt => "Select a Unit" %>
   </div>
   <div class="actions">
     <%= f.submit %>
