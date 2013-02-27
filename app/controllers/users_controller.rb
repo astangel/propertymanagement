@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  
+  load_and_authorize_resource
+  
   # GET /users
   # GET /users.json
   def index
@@ -13,7 +16,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @user = current_user
+    
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +27,7 @@ class UsersController < ApplicationController
   # GET /users/new
   # GET /users/new.json
   def new
-    @user = User.new
+    
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +37,13 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @user = current_user
+    
   end
 
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(params[:user])
+    
 
     respond_to do |format|
       if @user.save
@@ -57,6 +60,7 @@ class UsersController < ApplicationController
   # PUT /users/1.json
   def update
     @user = current_user
+    params[:user][:role_ids] ||= []
 
     respond_to do |format|
       if @user.update_attributes(params[:user])

@@ -27,6 +27,17 @@
     <%= f.label :password_confirmation %><br />
     <%= f.text_field :password_confirmation %>
   </div>
+  <% if can? :manage, :all %>
+  <div class="field" style="margin-bottom:1.5em;">
+    <%= f.label :roles %><br />
+    <% for role in Role.find(:all) %>
+      <div>
+      	<%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
+      	<%= role.name %>
+      </div>
+    <% end %>
+  </div>
+  <%end%>
   <div class="field" style="margin-bottom:1.5em;">
     <%= f.label :lease_id %><br />
     <%= f.select :lease_id, Lease.all.collect {|x| [x.unit.name, x.id]}, {:prompt => "Select a property"}, {:id => "sltProperty"} %>
