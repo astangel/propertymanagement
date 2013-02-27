@@ -12,15 +12,15 @@
     <th></th>
     <th></th>
   </tr>
-
-<% @repair_requests.each do |repair_request| %>
+<% str = (can? :manage, :all)?'@repair_requests':'@approved_requests' %>
+<% eval(str).each do |repair_request| %>
   <tr>
-    <td><%= repair_request.open_date.strftime("%m/%d/%Y") %></td>
-    <td><%= repair_request.close_date.strftime("%m/%d/%Y") %></td>
-    <td><%= repair_request.request_details %></td>
-    <td><%= repair_request.request_response %></td>
-    <td><%= repair_request.submitter.username %></td>
-    <td><%= repair_request.responder.username %></td>
+    <td><%if repair_request.open_date %><%= repair_request.open_date.strftime("%m/%d/%Y") %><%end%></td>
+    <td><%if repair_request.close_date %><%= repair_request.close_date.strftime("%m/%d/%Y") %><%end%></td>
+    <td><%if repair_request.request_details %><%= repair_request.request_details %><%end%></td>
+    <td><%if repair_request.request_response %><%= repair_request.request_response %><%end%></td>
+    <td><%if repair_request.submitter %><%= repair_request.submitter.username %><%end%></td>
+    <td><%if repair_request.responder %><%= repair_request.responder.username %><%end%></td>
     <td><%= link_to 'Show', repair_request %></td>
     <td><%= link_to 'Edit', edit_repair_request_path(repair_request) %></td>
     <td><%= link_to 'Destroy', repair_request, confirm: 'Are you sure?', method: :delete %></td>
@@ -29,5 +29,8 @@
 </table>
 
 <br />
+<% if can? :manage, current_user %>
 
 <%= link_to 'New Repair request', new_repair_request_path %>
+
+<%end%>

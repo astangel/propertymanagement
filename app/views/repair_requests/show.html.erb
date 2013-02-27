@@ -1,33 +1,44 @@
+<%if @repair_request.open_date? %>
 <p>
   <b>Open date:</b>
   <%= @repair_request.open_date.strftime("%m/%d/%Y") %>
 </p>
+<%end%>
 
+<%if @repair_request.close_date? %>
 <p>
   <b>Close date:</b>
   <%= @repair_request.close_date.strftime("%m/%d/%Y") %>
 </p>
+<%end%>
 
+<%if @repair_request.request_details?%>
 <p>
   <b>Request details:</b>
   <%= @repair_request.request_details %>
 </p>
+<%end%>
 
+<%if @repair_request.request_response?%>
 <p>
   <b>Request response:</b>
   <%= @repair_request.request_response %>
 </p>
-
+<%end%>
+  
+  <%if @repair_request.submitter %>
 <p>
   <b>Submitter:</b>
   <%= @repair_request.submitter.username %>
 </p>
+  <%end%>
 
+<%if @repair_request.responder %>
 <p>
   <b>Responder:</b>
   <%= @repair_request.responder.username %>
 </p>
-
+  <%end%>
 
 <%= link_to 'Edit', edit_repair_request_path(@repair_request) %> |
 <%= link_to 'Back', repair_requests_path %>

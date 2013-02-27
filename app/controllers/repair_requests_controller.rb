@@ -3,10 +3,16 @@ class RepairRequestsController < ApplicationController
   # GET /repair_requests.json
   def index
     @repair_requests = RepairRequest.all
+    @approved_requests = RepairRequest.where(:submitter_id => current_user)
+    if !current_user
+      flash[:error] = "Access Denied."
+      redirect_to root_url
+    else
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @repair_requests }
+    end
     end
   end
 
@@ -14,6 +20,10 @@ class RepairRequestsController < ApplicationController
   # GET /repair_requests/1.json
   def show
     @repair_request = RepairRequest.find(params[:id])
+    if !current_user
+      flash[:error] = "Access Denied."
+      redirect_to root_url
+    end
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,10 +35,15 @@ class RepairRequestsController < ApplicationController
   # GET /repair_requests/new.json
   def new
     @repair_request = RepairRequest.new
+    if !current_user
+      flash[:error] = "Access Denied."
+      redirect_to root_url
+    else
 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @repair_request }
+    end
     end
   end
 
@@ -41,6 +56,10 @@ class RepairRequestsController < ApplicationController
   # POST /repair_requests.json
   def create
     @repair_request = RepairRequest.new(params[:repair_request])
+    @repair_request.submitter = current_user
+     if current_user.has_role? :manager
+       @repair_request.responder = current_user
+     end
 
     respond_to do |format|
       if @repair_request.save
@@ -57,6 +76,11 @@ class RepairRequestsController < ApplicationController
   # PUT /repair_requests/1.json
   def update
     @repair_request = RepairRequest.find(params[:id])
+    if current_user.has_role? :renter
+      @repair_request.submitter = current_user
+    elsif current_user.has_role? :manager
+      @repair_request.responder = current_user
+    end
 
     respond_to do |format|
       if @repair_request.update_attributes(params[:repair_request])
