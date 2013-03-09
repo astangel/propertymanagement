@@ -3,21 +3,29 @@ class LeasesController < ApplicationController
   # GET /leases.json
   def index
     @leases = Lease.all
-
+    @approved_leases = [].push(current_user.lease)
+    if !current_user
+      flash[:error] = "Access Denied."
+      redirect_to root_url
+    else
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @leases }
-    end
+    end end
   end
 
   # GET /leases/1
   # GET /leases/1.json
   def show
     @lease = Lease.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @lease }
+    if (((current_user)&&(@lease.id==current_user.lease.id))||(can? :manage, :all))
+      respond_to do |format|
+       format.html # show.html.erb
+       format.json { render json: @lease }
+      end
+    else
+      flash[:error] = "Access Denied."
+      redirect_to root_url
     end
   end
 
@@ -25,16 +33,25 @@ class LeasesController < ApplicationController
   # GET /leases/new.json
   def new
     @lease = Lease.new
+    if ((!current_user)||(!can? :manage, :all))
+      flash[:error] = "Access Denied."
+      redirect_to root_url
+    else
 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @lease }
-    end
+    end end
   end
 
   # GET /leases/1/edit
   def edit
     @lease = Lease.find(params[:id])
+    
+    if ((!current_user)||(!can? :manage, :all))
+      flash[:error] = "Access Denied."
+      redirect_to root_url
+    end    
   end
 
   # POST /leases

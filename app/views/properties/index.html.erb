@@ -24,12 +24,16 @@
     	  <li><%=c.name%></li>
     	<% end %></td>
     <td><%= link_to 'Show', property %></td>
+    <% if can? :manage, :all %>
     <td><%= link_to 'Edit', edit_property_path(property) %></td>
     <td><%= link_to 'Destroy', property, confirm: 'Are you sure?', method: :delete %></td>
+    <%else%>
+    <td /><td />
+    <%end%>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Property', new_property_path %>
+<% if can? :manage, :all %><%= link_to 'New Property', new_property_path %><%end%>

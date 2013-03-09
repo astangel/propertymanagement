@@ -14,10 +14,14 @@ class UnitsController < ApplicationController
   # GET /units/1.json
   def show
     @unit = Unit.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @unit }
+    if (((current_user)&&(@unit.id==current_user.lease.unit.id))||(can? :manage, :all))
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @unit }
+      end
+    else
+      flash[:error] = "Access Denied."
+      redirect_to root_url
     end
   end
 
@@ -25,16 +29,25 @@ class UnitsController < ApplicationController
   # GET /units/new.json
   def new
     @unit = Unit.new
+    if ((!current_user)||(!can? :manage, :all))
+      flash[:error] = "Access Denied."
+      redirect_to root_url
+    else
 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @unit }
+    end
     end
   end
 
   # GET /units/1/edit
   def edit
     @unit = Unit.find(params[:id])
+    if ((!current_user)||(!can? :manage, :all))
+      flash[:error] = "Access Denied."
+      redirect_to root_url
+    end
   end
 
   # POST /units
@@ -73,11 +86,16 @@ class UnitsController < ApplicationController
   # DELETE /units/1.json
   def destroy
     @unit = Unit.find(params[:id])
+    if !current_user
+      flash[:error] = "Access Denied."
+      redirect_to root_url
+    else
     @unit.destroy
 
     respond_to do |format|
       format.html { redirect_to units_url }
       format.json { head :no_content }
+    end
     end
   end
 end

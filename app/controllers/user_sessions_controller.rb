@@ -17,7 +17,7 @@ class UserSessionsController < ApplicationController
   # POST /user_sessions.json
   def create
     @user_session = UserSession.new(params[:user_session])
-    params[:user][:role_ids] ||= []
+    #params[:user][:role_ids] ||= []
 
     respond_to do |format|
       if @user_session.save

@@ -25,16 +25,24 @@ class PropertiesController < ApplicationController
   # GET /properties/new.json
   def new
     @property = Property.new
-
+    if ((!current_user)||(!can? :manage, :all))
+      flash[:error] = "Access Denied."
+      redirect_to root_url
+    else
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @property }
+    end
     end
   end
 
   # GET /properties/1/edit
   def edit
     @property = Property.find(params[:id])
+    if ((!current_user)||(!can? :manage, :all))
+      flash[:error] = "Access Denied."
+      redirect_to root_url
+    end
   end
 
   # POST /properties
@@ -73,11 +81,16 @@ class PropertiesController < ApplicationController
   # DELETE /properties/1.json
   def destroy
     @property = Property.find(params[:id])
+    if !current_user
+      flash[:error] = "Access Denied."
+      redirect_to root_url
+    else
     @property.destroy
 
     respond_to do |format|
       format.html { redirect_to properties_url }
       format.json { head :no_content }
+    end
     end
   end
 end

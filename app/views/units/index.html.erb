@@ -5,7 +5,7 @@
     <th>Name</th>
     <th>Square feet</th>
     <th>Property</th>
-    <th>Renters</th>
+    <th><% if can? :manage, :all %>Renters<%end%></th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,16 +16,20 @@
     <td><%= unit.name %></td>
     <td><%= unit.square_feet %></td>
     <td><%= unit.property.name%></td>
+    <% if can? :manage, :all %>
     <td><% unit.renters.each do |c| %>
       <li><%=c.username%></li>
     <% end %></td>
     <td><%= link_to 'Show', unit %></td>
     <td><%= link_to 'Edit', edit_unit_path(unit) %></td>
     <td><%= link_to 'Destroy', unit, confirm: 'Are you sure?', method: :delete %></td>
+    <%else%>
+    <td /><td /><td /><td />
+    <%end%>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Unit', new_unit_path %>
+<% if can? :manage, :all %><%= link_to 'New Unit', new_unit_path %><%end%>

@@ -48,8 +48,6 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-  <%else%>
-    <% flash[:error] = "Access Denied." %>
-    <% redirect_to repair_requests_path %>
+
   <%end%>
 <% end %>

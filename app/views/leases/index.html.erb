@@ -11,8 +11,8 @@
     <th></th>
     <th></th>
   </tr>
-
-<% @leases.each do |lease| %>
+<% str = (can? :manage, :all)?'@leases':'@approved_leases' %>
+<% eval(str).each do |lease| %>
   <tr>
     <td><%= lease.start_date %></td>
     <td><%= lease.end_date %></td>
@@ -22,12 +22,16 @@
     	  <li><%=c.username%></li>
     	<% end %></td>
     <td><%= link_to 'Show', lease %></td>
+    <% if can? :manage, :all %>
     <td><%= link_to 'Edit', edit_lease_path(lease) %></td>
     <td><%= link_to 'Destroy', lease, confirm: 'Are you sure?', method: :delete %></td>
+    <%else%>
+    <td /><td />
+    <%end%>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Lease', new_lease_path %>
+<% if can? :manage, :all %><%= link_to 'New Lease', new_lease_path %><%end%>
