@@ -4,4 +4,8 @@ class Unit < ActiveRecord::Base
   belongs_to :property
   has_many :leases
   has_many :renters, :class_name => 'User', :through => :leases
+  
+  def prop_unit
+    "#{property.name}: #{name}"
+  end
 end

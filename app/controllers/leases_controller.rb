@@ -3,11 +3,12 @@ class LeasesController < ApplicationController
   # GET /leases.json
   def index
     @leases = Lease.all
-    @approved_leases = [].push(current_user.lease)
+
     if !current_user
       flash[:error] = "Access Denied."
       redirect_to root_url
     else
+    @approved_leases = [].push(current_user.lease)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @leases }

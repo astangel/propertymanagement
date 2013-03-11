@@ -25,7 +25,8 @@
   </div>
   <div class="field">
     <%= f.label :unit_id %><br />
-    <%= f.collection_select :unit_id, Unit.all.collect, :id, :name, :prompt => "Select a Unit" %>
+
+    <%= f.select :unit_id, Unit.all.collect {|x| [x.prop_unit, x.id]}, {:prompt => "Select a Unit"}, {:id => "sltUnit"} %>
   </div>
   <div class="actions">
     <%= f.submit %>

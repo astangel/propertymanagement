@@ -20,11 +20,10 @@ class RepairRequestsController < ApplicationController
   # GET /repair_requests/1.json
   def show
     @repair_request = RepairRequest.find(params[:id])
-    if !current_user
+    if((!current_user) || ((@repair_request.submitter!=current_user) && (!can? :manage, :all)))
       flash[:error] = "Access Denied."
       redirect_to root_url
     else
-
       respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @repair_request }
