@@ -32,6 +32,7 @@
     <div><%= link_to 'Leases', leases_path %></div><%end%><%end%>
 
     	  <% if current_user %>
+    	<div id="payments_link"><%= link_to "Payments", payments_path %></div>
         <div id="login">	
         	
     	  	<%= link_to "Edit Profile", edit_user_path(current_user) %>

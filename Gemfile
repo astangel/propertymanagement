@@ -39,3 +39,4 @@ gem 'jquery-rails'
 
 gem 'authlogic', :git => 'git://github.com/binarylogic/authlogic.git'
 gem 'cancan'
+gem 'activemerchant'
