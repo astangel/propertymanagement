@@ -1,0 +1,38 @@
+<p>
+  <b>Amount:</b>
+  <%= @payment.amount %>
+</p>
+
+<p>
+  <b>Ip address:</b>
+  <%= @payment.ip_address %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @payment.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @payment.last_name %>
+</p>
+
+<p>
+  <b>Card expires on:</b>
+  <%= @payment.card_expires_on %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @payment.user.username %>
+</p>
+
+<p>
+  <b>Lease:</b>
+  <%= @payment.lease.unit.prop_unit %>
+</p>
+
+
+<%= link_to 'Edit', edit_payment_path(@payment) %> |
+<%= link_to 'Back', payments_path %>
